@@ -35,7 +35,15 @@ text-align: center;
 .flash{
   background-color: white;
 }
-
+#startbtn{
+  margin: 5px;
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(205, 201, 201);
+  font-size: 20px;
+}
 
 
 
