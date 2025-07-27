@@ -2,12 +2,12 @@ let gamesq=[];
 let usersq=[];
 let color=["red","yellow","green","blue"];
 // let userscore=[];
-
+let stbtn=document.getElementById("startbtn");
 let start=false;
 let level=0;
 let h2=document.querySelector("h2");
 
-document.addEventListener("keypress",function (){
+stbtn.addEventListener("touchstart",function (){
     if(start==false){
       console.log("Game started");
       start=true;
@@ -50,7 +50,7 @@ function btnpress(){
 
 let btns=document.querySelectorAll(".btn");
 for(btn of btns){
-  btn.addEventListener("click",btnpress);
+  btn.addEventListener("touchstart",btnpress);
 }
 
 function checkans(idx){
@@ -61,7 +61,7 @@ function checkans(idx){
   }else{
   //   userscore.push(level);
   //  let max= displayscore();
-    h2.innerHTML=`Games over. Your score:<b>${level}<b><br> Press any key to start again:`;
+    h2.innerHTML=`Games over. Your score:<b>${level}<b><br> Press Start again:`;
     start=false;
     gamesq=[];
     level=0;
